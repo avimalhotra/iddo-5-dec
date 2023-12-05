@@ -1,0 +1,119 @@
+*, ::before, ::after{ margin: 0; box-sizing: border-box;}
+a{ text-decoration: none;}
+img{ vertical-align: bottom;}
+iframe{ border: none;}
+label{ display: inline-block;}
+button{ cursor:pointer; padding: 0;}
+:disabled{ cursor: not-allowed;}
+table{ border-collapse: collapse;}
+
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/Proxima-Nova-Regular.woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/Proxima-Nova-Bold.woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: proxima;
+    src: url(../fonts/Proxima-Nova-Thin.woff2);
+    font-weight: 100;
+    font-display: swap;
+}
+
+html{ font-size: 15px;}
+body{
+    font-family: proxima, sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+.row{
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0 -1rem;
+}
+[class^="col-"]{ 
+    flex: 1 0 auto;
+    padding: 0 1rem;
+}
+.col-1{
+    flex-basis: 8.33%;
+    max-width: 8.33%;
+}
+.col-2{
+    flex-basis: 16.66%;
+    max-width: 16.66%;
+}
+.col-3{
+    flex-basis: 25%;
+    max-width: 25%;
+}
+.col-4{
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+}
+.col-5{
+    flex-basis: 41.66%;
+    max-width: 41.66%;
+}
+.col-6{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.col-7{
+    flex-basis: 58.33%;
+    max-width: 58.33%;
+}
+.col-8{
+    flex-basis: 66.66%;
+    max-width: 66.66%;
+}
+.col-9{
+    flex-basis: 75%;
+    max-width: 75%;
+}
+.col-10{
+    flex-basis: 83.33%;
+    max-width: 83.33%;
+}
+.col-11{
+    flex-basis: 91.66%;
+    max-width: 91.66%;
+}
+.col-12{
+    flex-basis: 100%;
+    max-width: 100%;
+}
+
+
+@media screen and (max-width:1220px){
+    html{ font-size: 14px;}   
+}
+
+@media screen and (max-width:980px){
+    html{ font-size: 13px;}
+    .col-t-6{flex-basis: 50%; max-width: 50%;}
+    .col-t-12{flex-basis: 100%; max-width: 100%;}
+}
+
+@media screen and (max-width:767px){
+    html{ font-size: 12px;}
+    .col-m-6{flex-basis: 50%; max-width: 50%;}
+    .col-m-12{flex-basis: 100%; max-width: 100%;}
+}
+
+@media screen and (max-width:460px){
+    .col-p-6{flex-basis: 50%; max-width: 50%;}
+    .col-p-12{flex-basis: 100%; max-width: 100%;}
+}
+
