@@ -104,16 +104,17 @@ body{
 .space-bet{ justify-content: space-between;}
 .align-center{ align-items: center;}
 .unstyle{ list-style: none; padding: 0;}
-
+.btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff)}
+h2{font-size: 72px; line-height: 60px; border-bottom: 10px solid; margin-bottom: 2rem;}
 /* layout */
 
-header{ background: #000; color: #fff; position: sticky; top: 0;}
+
+header{ background: #000; color: #fff; position: sticky; top: 0; z-index: 10;}
 h1{ font-size: 30px; }
 h1 a{ color: inherit; line-height: 80px; display: inline-block;}
 nav{ margin-left: -20px; }
 nav li{ margin: 0 5px; }
 nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
-.btn{ width: 90px; height: 35px; border: 2px solid; color: var(--red); background: none; border-radius: 10px; font: 16px var(--ff)}
 .btn-mob span{ display: block; height: 2px; width: 80%; background: var(--red); margin: 5px auto;  }
 .hide-desktop{display: none;}
 
@@ -124,12 +125,25 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
 .banner a{ color: var(--red); }
 
 
+.wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
+.circle{ font-size: 36px; width: 100px; aspect-ratio: 1/1; /* line-height:100px; text-align: center; */ border: 2px solid; border-radius: 50%; display: grid; place-items: center; margin-right: 2rem; }
+.wrap-3 .row .row{ gap: 60px 0; }
+.wrap-3 h3{ font-size: 16px; line-height: 30px;}
+.wrap-3 p{ font-size: 14px; line-height: 22px; font-weight: 100;}
 
 
+.wrap-4{ background: #fff; color: var(--red); font-size: 36px; text-align: center; line-height: 10rem;}
 
 
-
-
+.wrap-5{ background: #ebebeb; color: #363636; padding: 100px 0;}
+.btn.active{ background: var(--red); color: #fff; border-color: var(--red);}
+.wrap-5 .btn{ margin: 0 10px 2rem 0;}
+.portfolio{ margin-top: 2rem; position: relative; overflow: hidden;}
+.details{ background: #fff; text-align: center; position: absolute; bottom: 0; left: 0; right: 0; padding: 20px 0; bottom: -100px; transition: .3s; }
+.details h3{ font-size: 18px; color: var(--red); line-height: 40px;}
+.details p{ font-size: 14px; color: #898989; font-weight: 100; line-height: 20px;}
+.portfolio:hover .details{ bottom: 0;}
+.portfolio img{ max-width: 100%; height: auto;}
 
 
 
@@ -137,6 +151,7 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
 
 @media screen and (max-width:1220px){
     html{ font-size: 14px;}   
+    h2{ font-size: 62px;}
 }
 
 @media screen and (max-width:980px){
@@ -153,9 +168,12 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
     .collapse{ display: none;}
     .btn-mob{ display: inline-block; align-self: center;}
     .hide-desktop{ display: flex;}
+    h2{ font-size: 4rem;}
+    .wrap-5 .btn{ margin-right: 6px;}
 }
 
 @media screen and (max-width:460px){
+    .col-p-4{flex-basis: 33.33%; max-width: 33.33%;}
     .col-p-6{flex-basis: 50%; max-width: 50%;}
     .col-p-12{flex-basis: 100%; max-width: 100%;}
     .banner .flex{  flex-flow: column wrap;}
