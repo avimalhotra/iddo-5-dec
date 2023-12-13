@@ -207,7 +207,18 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 
 
 .wrap-11{ background: #7f7f7f; padding: 28px 0 0 0;}
-.box{ color: #fff; background: #a6a6a6; line-height: 95px; text-align: center; font-style: 24px; margin-bottom: 27px;}
+.box{ color: #fff; background: #a6a6a6; line-height: 95px; text-align: center; font-size: 24px; margin-bottom: 27px;}
+
+
+.wrap-12 address{ font-weight: 100; font-size: 14px; color: #363636;}
+.wrap-12 a{ color: var(--red);}
+.wrap-12 label{ display: block; border: 2px solid; padding: 17px; margin: 1rem 0; font-weight: bold; }
+.wrap-12 input{ border: none; background: none; }
+.wrap-12 input:focus,.wrap-12 textarea:focus{ outline: none; }
+.wrap-12 label:focus-within{ border-color: var(--red); }
+.wrap-12 textarea{ border: none; background: none; resize: none; vertical-align: top; }
+.wrap-12 button{ margin: 1rem 0; display: block; width: 100%; height: 87px; border: none; background: #fff; color: var(--red); font: 16px var(--ff); border-radius: 10px;}
+.wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;} 
 
 
 .wrap-13{ background: #252525; padding: 25px 0; color: #fff; text-align: center; }
