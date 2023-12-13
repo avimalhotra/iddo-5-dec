@@ -31,7 +31,9 @@ ul{ list-style: none; padding: 0;}
 html{
     font-size: 15px;
     --red:#ca3c3c;
-    --ff:proxima, sans-serif
+    --ff:proxima, sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 body{
     font:16px var(--ff);
