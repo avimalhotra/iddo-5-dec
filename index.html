@@ -32,7 +32,7 @@
                                     <li><a href="#contact">Contact</a></li>
                                 </ul>
                             </nav>
-                            <button class="btn">Sign up</button>
+                            <button class="btn signup">Sign up</button>
                         </div>
                     </div>
                 </div>
@@ -111,12 +111,12 @@
                     <button class="btn active">All</button><button class="btn">Website</button><button class="btn">Branding</button>
                 </div>
             </div>
-            <div class="row">
+            <div class="row tabs">
                 <div class="col-4 col-t-6 col-p-12">
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 1</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 2</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -134,7 +134,7 @@
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 3</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -143,7 +143,7 @@
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 4</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 5</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                     <div class="portfolio">
                         <img src="img/business-website.webp" alt="business website" width="370" height="370" loading="lazy">
                         <div class="details">
-                            <h3>PROJECT NAME</h3>
+                            <h3>PROJECT NAME 6</h3>
                             <p>Lorem ipsum dolor sit amet.</p>
                         </div>
                     </div>
@@ -388,7 +388,62 @@
     <footer class="wrap-13">
         <div class="container">
             <p>&copy; 2023</p>
+            <button class="top"><span class="fa fa-chevron-up"></span></button>
         </div>
     </footer>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
+<script>
+$(function(){
+    $(".wrap-5 .btn").click(function(){
+        $(".wrap-5 .btn").removeClass("active");
+        $(this).addClass("active");
+        
+        if( $(this).text()=="All"){
+            $(".wrap-5 .tabs .col-4").fadeIn();
+        }
+        else if( $(this).text()=="Website"){
+            $(".wrap-5 .tabs .col-4").fadeOut(0);
+            $(".wrap-5 .tabs .col-4:nth-child(1),.wrap-5 .tabs .col-4:nth-child(2),.wrap-5 .tabs .col-4:nth-child(3)").fadeIn();
+        }
+        else if( $(this).text()=="Branding"){
+            $(".wrap-5 .tabs .col-4").fadeOut(0);
+            $(".wrap-5 .tabs .col-4:nth-child(4),.wrap-5 .tabs .col-4:nth-child(5),.wrap-5 .tabs .col-4:nth-child(6)").fadeIn();
+        }
+    });
+
+    $(".accordion a").on("click",function(e){
+        e.preventDefault();
+        if( $(this).hasClass("active")==false ){
+          $(".accordion a").removeClass("active");
+          $(".accordion p").slideUp();
+          $(this).toggleClass("active");
+          $(this).next("p").slideToggle();
+        }
+    });
+    
+    $(".top").on("click",function(){
+        $("body,html").animate({scrollTop:0})
+    });
+
+    $(".btn-mob").on("click",function(){
+        $(".collapse").slideToggle();
+    });
+
+
+    if( screen.width<768){
+        $("nav a").click(function(){
+            $(".collapse").slideUp();
+        })
+    }
+
+
+
+    $(".signup").click(function(){
+        
+    });
+
+
+});
+</script>  
 </body>
 </html>

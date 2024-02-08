@@ -196,7 +196,7 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 .accordion span.fa{ margin-right: 24px; font-size: 24px; vertical-align: middle;}
 .accordion p{ display: none; margin: 20px;}
 .accordion a.active{ color: var(--red);}
-.accordion a.active + p{ display: block;}
+.accordion li:first-child p{ display: block;}
 
 
 
@@ -221,6 +221,8 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 .wrap-12 textarea{ border: none; background: none; resize: none; vertical-align: top; }
 .wrap-12 button{ margin: 1rem 0; display: block; width: 100%; height: 87px; border: none; background: #fff; color: var(--red); font: 16px var(--ff); border-radius: 10px;}
 .wrap-12 button span.fa{ font-size: 36px; vertical-align: middle;} 
+.top{ background: none; border: none; color: var(--red); font-size: 20px; }
+
 
 
 .wrap-13{ background: #252525; padding: 25px 0; color: #fff; text-align: center; }
@@ -255,7 +257,11 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
     .hide-desktop{ display: flex;}
     h2{ font-size: 4rem;}
     .wrap-5 .btn{ margin-right: 6px;}
-   
+    .collapse{ position: absolute; left: 0; right: 0; background: #000; padding-bottom: 10px; }
+    .collapse ul{ flex-flow: column wrap;} 
+    .collapse .flex{ flex-flow: column wrap;}
+    nav a{ line-height: 40px; text-align: right;}
+    nav{ margin: 0; width: 100%;}
 }
 
 @media screen and (max-width:460px){
