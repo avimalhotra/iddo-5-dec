@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" integrity="sha512-UBY4KATrDAEKgEEU+RAfY4yWrK0ah43NGwNr5o/xmncxsT+rv8jp7MI3a00I0Ep3NbAx05U5kw3DvyNCoz+Wcw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
 </head>
 <body id="home">
     <header class="wrap-1">
@@ -176,7 +177,7 @@
                 <div class="col-2"></div>
                 <div class="col-8 col-t-12">
                    <div class="reviews">
-                    <div class="review active">
+                    <div class="review">
                         <blockquote>
                             <p><q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus saepe veritatis soluta vel magnam similique dolore.</q></p>
                             <figure>
@@ -185,13 +186,29 @@
                             </figure>
                         </blockquote>
                     </div>
-                    <div class="review">2</div>
-                    <div class="review">3</div>
-                    <ul class="pager flex">
+                    <div class="review">
+                        <blockquote>
+                            <p><q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus saepe veritatis soluta vel magnam similique dolore.</q></p>
+                            <figure>
+                                <img src="img/jack-efron.webp" alt="JACK EFRON" width="70" height="70" loading="lazy">
+                                <figcaption>JACK EFRON</figcaption>
+                            </figure>
+                        </blockquote>
+                    </div>
+                    <div class="review">
+                        <blockquote>
+                            <p><q>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus saepe veritatis soluta vel magnam similique dolore.</q></p>
+                            <figure>
+                                <img src="img/jack-efron.webp" alt="JACK EFRON" width="70" height="70" loading="lazy">
+                                <figcaption>JACK EFRON</figcaption>
+                            </figure>
+                        </blockquote>
+                    </div>
+                    <!-- <ul class="pager flex">
                         <li><a aria-label="1" class="active" href=""></a></li>
                         <li><a aria-label="2" href=""></a></li>
                         <li><a aria-label="3" href=""></a></li>
-                    </ul>
+                    </ul> -->
                    </div>
                 </div>
             </div>
@@ -391,7 +408,18 @@
             <button class="top"><span class="fa fa-chevron-up"></span></button>
         </div>
     </footer>
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>  
+    <div class="popupform" hidden>
+        <button class="close">&times;</button>
+        <form action="">
+            <label><span class="fa fa-user"></span> Name <input type="email" required></label>
+            <label><span class="fa fa-envelope"></span> EMAIL <input type="email" required></label>
+            <label><span class="fa fa-pencil"></span> PASSWORD <input type="password" required></label>
+            <button class="btn">Sign Up</button>
+            <button class="btn" type="reset">Reset</button>
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js" integrity="sha512-p55Bpm5gf7tvTsmkwyszUe4oVMwxJMoff7Jq3J/oHaBk+tNQvDKNz9/gLxn9vyCjgd6SAoqLnL13fnuZzCYAUA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>    
 <script>
 $(function(){
     $(".wrap-5 .btn").click(function(){
@@ -439,9 +467,27 @@ $(function(){
 
 
     $(".signup").click(function(){
-        
+        $("body").append(`<div class="overlay"></div>`);
+        $("body").append(`<div class="popup"></div>`);
+        $("body .popup").append( $('.popupform').html() );
+        $("body .popup input:first").focus();
+
+        $(".popup, .close").click(function(){
+            $(".popup, .overlay").remove();
+        })
     });
 
+
+    $(".reviews").bxSlider({
+        auto:true,
+        controls:false,
+        pause:5000
+    });
+
+
+    //$("footer").load("README.md")
+    //$.ajax()
+    //$.fn.abcd=function(){ return "abcd"}
 
 });
 </script>  
