@@ -30,7 +30,7 @@ ul{ list-style: none; padding: 0;}
 
 html{
     font-size: 15px;
-    --red:#ca3c3c;
+    --red:rgb(157, 35, 35);
     --ff:proxima, sans-serif;
     scroll-behavior: smooth;
     scroll-padding-top: 80px;
@@ -121,12 +121,13 @@ nav li{ margin: 0 5px; }
 nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
 .btn-mob span{ display: block; height: 2px; width: 80%; background: var(--red); margin: 5px auto;  }
 .hide-desktop{display: none;}
+header .btn{ color: #e35151; }
 
 
 .banner{ background: #666; color: #fff; padding: 200px 0;}
 .banner button{ background: none; border: none; font-size: 10rem; color: #fff; margin-right: 40px;}
 .banner p{ font-size: 4rem; font-weight: 100; }
-.banner a{ color: var(--red); }
+.banner a{ color: inherit; }
 
 
 .wrap-3{ background: var(--red); color: #fff; padding: 50px 0;}
@@ -176,7 +177,7 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
 .social a{ display: block; width: 50px; line-height: 50px; text-align: center; background: var(--red); color: #fff; border-radius: 50%; font-size: 24px;}
 .gap{ margin: 50px 0 0 100px;}
 .gap h3{ color: var(--red); font-size: 18px;}
-.gap small{ font-size: 14px; font-weight: 100; color: #898989;}
+.gap small{ font-size: 14px; font-weight: 100; color: #666;}
 .gap p{ font-size: 14px; font-weight: 100; color: #363636; line-height: 22px; margin-top: 30px; }
 
 
@@ -193,7 +194,7 @@ nav a{ color: inherit; display: block; line-height: 80px; padding: 0 15px;}
 canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 .accordion{ margin-top: 50px;}
 .accordion li{ margin-bottom: 10px;}
-.accordion a{ color: #898989; border: 1px solid #ebebeb; display: block; border-radius: 10px; padding: 13px; font-size: 14px; font-weight: bold; }
+.accordion a{ color: #666; border: 1px solid #ebebeb; display: block; border-radius: 10px; padding: 13px; font-size: 14px; font-weight: bold; }
 .accordion a::after{content: '+'; float: right;}
  .accordion a.active::after{content: '—';}
 .accordion span.fa{ margin-right: 24px; font-size: 24px; vertical-align: middle;}
@@ -212,7 +213,7 @@ canvas{ background: #ddd; margin-top: 50px; max-width: 100%;}
 
 
 .wrap-11{ background: #7f7f7f; padding: 28px 0 0 0;}
-.box{ color: #fff; background: #a6a6a6; line-height: 95px; text-align: center; font-size: 24px; margin-bottom: 27px;}
+.box{ color: #fff; background: #888; line-height: 95px; text-align: center; font-size: 24px; margin-bottom: 27px;}
 
 
 .wrap-12 address{ font-weight: 100; font-size: 14px; color: #363636;}
